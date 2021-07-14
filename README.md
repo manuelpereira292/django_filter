@@ -68,3 +68,4 @@ py manage.py migrate
 Create super user
 py manage.py createsuperuser
 
+py manage.py create_data titles
