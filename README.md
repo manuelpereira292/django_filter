@@ -36,3 +36,35 @@ Edit <project_name>/settins.py
 LANGUAGE_CODE = 'pt'
 TIME_ZONE = 'Europe/Lisbon'
 ```
+
+Create app users
+py manage.py startapp users
+
+Edit <project_name>/settins.py
+```python
+INSTALLED_APPS = [
+    # Users apps
+    'users.apps.UsersConfig',
+]
+
+# User Model
+
+AUTH_USER_MODEL = 'users.User'
+```
+
+Copy users/admin.py
+Copy users/apps.py
+Copy users/forms.py
+Copy users/models.py
+
+Delete db.sqlite3
+
+Create model - makemigrations
+py manage.py makemigrations
+
+Create database apps - migrate
+py manage.py migrate
+
+Create super user
+py manage.py createsuperuser
+
